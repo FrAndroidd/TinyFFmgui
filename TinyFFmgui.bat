@@ -216,7 +216,7 @@ if not !trimStart! == False (
     set fTrim=-ss !trimStart! -to !trimEnd!
 ) else (set fTrim=)
 
-start "FFmpeg" cmd /c ""!cdir!ffmpeg.exe" -i "!folderInput!" !fVideoOverlay! -s !videoWidth!:!videoHeight! !fTrim! -preset !preset! -b:v !videoBitrate!k !fAudio! -an !folderOutput!"
+start "FFmpeg" cmd /c ""!cdir!ffmpeg.exe" -i "!folderInput!" !fVideoOverlay! -s !videoWidth!:!videoHeight! !fTrim! -preset !preset! -b:v !videoBitrate!k !fAudio! !folderOutput!"
 
 goto main
 
